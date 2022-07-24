@@ -21,7 +21,6 @@ export default function Login(props) {
 			} 
 		})
 		.catch(function (error) {
-		    console.log("error", error);
 		    setErrorMessage(error.response.data.message)
 		});
 	}

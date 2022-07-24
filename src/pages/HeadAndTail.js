@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Redirect } from 'react-router-dom';
 import _ from 'underscore'
 
 export default function HeadAndTail() {
@@ -14,7 +13,6 @@ export default function HeadAndTail() {
 	}
 
 	const handleSubmit = (e) => {
-		console.log('event data', key)
 		if (key) {
 			function htFn(value) {
 				const htArr = []
@@ -25,9 +23,9 @@ export default function HeadAndTail() {
 			
 			if (!headAndTailData.length) htFn(nValue)
 			else {
-				if (headOrTail == nValue) {
+				if (headOrTail === nValue) {
 					const htData = _.map(headAndTailData, (item, i) => {
-						if (i == headAndTailData.length-1) item.push(nValue)
+						if (i === headAndTailData.length-1) item.push(nValue)
 						return item
 					})
 					setHeadAndTailData(htData)
@@ -35,21 +33,9 @@ export default function HeadAndTail() {
 			}
 			setHeadOrTail(nValue)
 			setKey('')
-
-			console.log('headOrTail', headOrTail)
-			console.log('headAndTailData', headAndTailData)
-			// e.preventDefault()
 		} else setErrorMessage(true)
 		
 	}
-
-	const handleLogout = (props) => {
-		localStorage.removeItem('auth_token');
-		// localStorage.setItem("authState", "logout");
-		props.history.push('/login')
-	};
-
-	// if (localStorage.getItem("authState") === 'logout') return <Redirect to='/login' />
 
 	return (
 		<div className="ht-page">

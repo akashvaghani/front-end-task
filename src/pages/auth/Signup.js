@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import _ from 'underscore';
 import axios from 'axios';
 
@@ -23,7 +23,6 @@ export default function Signup(props) {
 				props.history.push('/login')
 			})
 			.catch(function (error) {
-				console.log("error", error.response.data.message, error.message);
 				setErrorMessage(error.response.data.message)
 			});
 		}
