@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+input:focus { outline: none; }
+
+/*Common*/
+.m-l-10 { margin-left: 10px }
+.m-l-20 { margin-left: 20px }
+.m-r-20 { margin-right: 20px }
+.m-t-10 { margin-top: 10px }
+.m-t-20 { margin-top: 20px; }
+.text-right { text-align: right; }
+.d-flex { display: flex; }
+.w-auto { width: auto !important; }
+/**/
+
+/*Login*/
+/*.login-page input {
+    font-size:26px;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+    text-align: center;
+    background-color: none;
+}
+*/
+.login-page, .signup-page, .ht-page { width: 300px; margin: auto; }
+.login-page input, .signup-page input, .ht-page select { width: 100%; }
+.title-text { font-size: 40px; }
+
+
+.home-page { width: 800px; margin: auto; }
+.error-msg { font-size: 12px; color: red; }
+/*.product-wrapper { 
+  height: 50px;
+  line-height: 50px;
+  padding: 15px;
+  border: 1px solid #efefef;
+  border-radius: 10px;
+  font-size: 19px;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 30px;
+}
+.product-container { padding-top: 30px; }
+.product-page i { font-size: 30px; cursor: pointer; }*/
+/**/
